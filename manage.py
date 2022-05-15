@@ -1,9 +1,14 @@
 from app import create_app
 import app
+from flask_script import Manager, Server
+
+
 
 app = create_app()
 
+manager = Manager(app)
+manager.add_command('server',Server)
 
 if __name__ == '__main__':
 
-    app.run()
+    manager.run()
