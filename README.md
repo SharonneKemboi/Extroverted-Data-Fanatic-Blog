@@ -13,7 +13,7 @@
 + [Description](#description)
 + [Setup/Installation Requirements](setup&installationrequirements)
 + [How To Access the Site](#howtoaccessthesite)
-+ [BDD & TDD](#bdd&tdd)
++ [TDD](#tdd)
 + [UserStory](#userstory)
 + [Technology & Tools](#technology&tools)
 + [Reference](#reference)
@@ -61,10 +61,6 @@ $ sudo apt-get install postgresql postgresql-contrib libpq-dev
 > This App is being hosted by GitHub Pages. The link to the live site is: https://data-fanatic-blog.herokuapp.com/
 
 
-## BDD
-
-
-
 ## TDD
 
 > To test the app, run this command in the terminal;
@@ -73,7 +69,13 @@ $ sudo apt-get install postgresql postgresql-contrib libpq-dev
 
 
 ## User Story
-*
+* A user can view the blog posts on the blogsite by Categories -Achieved
+* A user can comment on blog posts. -Achieved
+* A user can receive an email alert when a new post is made by subscribing- Not achieved
+A user can see random quotes on the site.- Achieved
+* A user can sign in/Sign up to the blog - Achieved
+* A user can be able to create a blog post by category - Achieved
+* A user can edit or delete blogs they have created. - Not Achieved
 
 ### Technology & Tools
 * Python
@@ -91,7 +93,7 @@ $ sudo apt-get install postgresql postgresql-contrib libpq-dev
 
 
 ## Known Bugs
-> 
+> There are no known bugs yet. Seen Any Bug? Please Reach out ASAP!
 
 ## License
 
