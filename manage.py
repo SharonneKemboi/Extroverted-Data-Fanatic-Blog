@@ -5,8 +5,7 @@ from app.models import User,Post,Comment
 
 
 
-
-
+#Creating app instance
 app = create_app('development')
 
 manager = Manager(app)
@@ -30,5 +29,5 @@ def make_shell_context():
 
 
 if __name__ == '__main__':
-
+    app.config['SECRET_KEY'] = 'mySecret'
     manager.run()
