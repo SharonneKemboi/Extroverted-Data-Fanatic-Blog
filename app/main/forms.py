@@ -3,7 +3,7 @@ from wtforms import StringField, TextAreaField, SubmitField, SelectField
 from wtforms.validators import DataRequired
 
 class AddPostForm(FlaskForm):
-    title = StringField("Pitch Title", validators = [DataRequired()])
+    title = StringField("Blog Post Title", validators = [DataRequired()])
     post = TextAreaField("Go", validators = [DataRequired()])
     category = SelectField("category", choices=[("data-science", "data-science"),("data-analytics","data-analytics"),("data-cleaning","data-cleaning"),("data-visualization","data-visualization"),("data-mining","data-mining"),("random","random")],validators = [DataRequired()])
     submit = SubmitField("Add post")
