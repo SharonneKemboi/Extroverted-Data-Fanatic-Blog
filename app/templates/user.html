@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+{% endblock%}
+
+{% block content %}
+<div class="container">
+    <h1>{{user.name | upper}}</h1>
+    <div class="row">
+        <div class="col-sm-12 col-md-5 col-lg-5">
+            <div class="img-container">
+                <img src="{{url_for('static', filename = user.profile_pic)}}" class="img-thumbnail profile-pic">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-5 col-lg-5">
+            <p>BIO: {{user.bio}}</p>
+        </div>
+    </div>
+    <div class="">
+        <h3 class="text-center">Blog Posts</h3>
+        {% if posts %}
+        {% for row in posts | batch(2) %}
+        <div class="row post-row">
+            {% for post in row %}
+            <div class="col-md-5 post-card">
+                <img src="{{url_for('static',filename='post.user.profile_pic')}}" alt="">
+                <h3 class="marquee">{{post.title | upper}}</h3>
+                <p>Posted by <strong>{{post.user.name}}</strong></p>
+                <p>Date: <strong>{{post.date}}</strong> at <strong>{{post.time}}</strong></p>
+                <p>"{{post.content}}"</p>
+                <p>CATEGORY: <strong>{{post.category | upper}}</strong></p>
+                {% if current_user.is_authenticated %}
+                <a class="post-comment" href="{{url_for('main.view_comments',post_id = post.id)}}">View Comments</a>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+        {% else %}
+        <h2>You have no posts</h2>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
