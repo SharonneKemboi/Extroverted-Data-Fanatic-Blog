@@ -5,8 +5,7 @@
 
 
 ### Screenshot of the App
-<img src="">
-<img src="">
+<img src="https://github.com/SharonneKemboi/Extroverted-Data-Fanatic-Blog/blob/master/app/static/photos/mainsceen.png">
 
 
 ## Table of Content
