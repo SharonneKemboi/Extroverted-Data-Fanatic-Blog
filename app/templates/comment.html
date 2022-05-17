@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+{% endblock%}
+
+{% block content %}
+<div class="container">
+    <h2>Comment on {{post.title | upper}} by {{post.user.name | upper}}</h2>
+    {{wtf.quick_form(form)}}
+
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
