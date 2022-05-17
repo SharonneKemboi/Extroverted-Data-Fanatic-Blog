@@ -1,0 +1,22 @@
+{% extends 'bootstrap/base.html'%}
+
+
+{%block styles %}
+  {{super()}}
+ 
+
+  <!--Linking Fonts, CSS, Icon  -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+  <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
+  <link rel="icon" href="../static/photos/icon.jpeg">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/css/mdb.min.css" rel="stylesheet">
+{% endblock %}
+  <!-- Navbar block  -->
+{% block navbar %}
+  {% include 'navbar.html' %}
+{% endblock %}
+
+
+

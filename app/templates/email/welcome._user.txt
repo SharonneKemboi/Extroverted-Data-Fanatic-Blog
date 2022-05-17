@@ -1,0 +1,7 @@
+Hello {{user.username}}
+Welcome to the Extroverted Data Fanatic Blog by SharonneKay.
+
+We have just seen you have signed up for our application and want to welcome you to the family.
+Please enjoy this blog and feel free to also submit a blog post.
+
+Gracious!
