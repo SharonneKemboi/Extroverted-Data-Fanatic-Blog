@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf%}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+{% endblock%}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid " style="background-color: rgb(213, 245, 171); margin: 4%;">
+    <div class="container">
+        <h1 class="text-center">Oooops! Register or login to add your post</h1>
+
+        <hr class="my-2">
+
+       
+            <img src="../static/photos/login.png" alt="" srcset="" height="300" width="300" >
+        
+    
+            <a class="btn btn-lg " style="background-color:rgb(42, 6, 42) ; color: rgb(156, 244, 139); font-size: 2rem;" href="{{url_for('main.categories',category='all')}}" role="button"> View Posted Posts</a>
+        
+    </div>
+</div>
+
+
+{% endblock %}
