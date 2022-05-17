@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
+<link rel="icon" href="../static/photos/icon.jpeg">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/css/mdb.min.css" rel="stylesheet">
+
+{% endblock%}
+
+{% block content %}
+<div class="container">
+  {% for message in get_flashed_messages() %}
+  <div class="alert alert-info">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{ message }}
+  </div>
+  {% endfor %}
+  
+  <div class="row d-flex mt-5">
+        
+    <div class="col-md-6">
+        <img style="margin-left: 1%" src="../static/photos/1920-close-up-businessman-using-his-mobile-phone-or-tablet-outdoor-isolated-on-white-background.jpg" width="500px" height="400px" alt="">
+    </div>
+    <div class="col-md-6 mt-5" >
+            <h1 class="marquee" style="color: rgb(12, 207, 198)">Welcome To The <br> Data Fanatics Blog</h1>
+            <br>
+            <p class="bold" style="font-family: 'Gabriela'; font-weight:800; line-height:4vh">The more ways there are to slice the data, the more your analysis is a breeding ground for confirmation bias. The antidote is setting your decision criteria in advance.</p>
+            <br>
+            <a href="{{ url_for('auth.register') }}" class="btn" style="background-color: transparent;color:rgb(22, 238, 238); font-size: 1.7rem;">Get started Here!</a>
+        </div>
+</div>
+<div class="container-fluid"  style="background-image: url('https://www.simpson-associates.co.uk/wp-content/uploads/2018/02/bg2.jpg') 
+; background-size: cover; margin-top: 10%;">
+<div class="row" >
+    <hr>
+    <div class="col-md-6">
+            <div class="post" jumbotron>
+                    <p>{{quote}}</p>
+                    <p id="name">"{{quote_author}}"</p>
+                  </div>
+    </div>
+
+  
+  
+  <div class="col-md-6">
+  <h2 class="text-center text-light"><u><strong><i>Categories</i></strong></u></h2>
+  <br>
+  
+  <div class="center">
+    <div style="margin-left: 15%; overflow-y: scroll; height: 200px;" class="row categories">
+      <a href="{{url_for('main.categories',category='data-science')}}">
+        <div class="category col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <span>Data Science</span>
+      </div></a>
+      <a href="{{url_for('main.categories',category='data-analytics')}}"><div class="category col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <span>Data Analytics</span>
+      </div></a>
+
+
+      <a href="{{url_for('main.categories',category='data-cleaning')}}"><div class="category col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <span>Data Cleaning</span>
+      </div></a>
+    
+    
+      <a href="{{url_for('main.categories',category='data-mining')}}"><div class="category col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <span>Data Mining</span>
+      </div></a>
+
+      <a href="{{url_for('main.categories',category='random')}}"><div class="category col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <span>Random</span>
+      </div></a>
+
+      <a href="{{url_for('main.categories',category='data-visualization')}}"><div class="category col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <span>Data Visualization</span>
+      </div></a>
+      <a href="{{url_for('main.categories',category='all')}}"><div class="category col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <span>All Data Blogs</span>
+      </div></a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+    <!--Newsletter-->
+<footer>
+
+
+<section class="text-light p-5" style="margin-top: 2%; margin-bottom: 1%; background-color: #000;">
+  <div class="container">
+      <div class="d-md-flex justify-content-between align-items-center">
+          <h3 class="marquee">Subscribe to Get the Latest Blogs Posts </h3>
+<!--Form input-->
+          <div class="input-group news-input">
+              <input type="text" 
+              class="form-control" 
+              placeholder="Enter Email" >
+
+              <button 
+              class="btn btn btn-lg" 
+              type="button" 
+              id="button-addon2" style="font-size:2rem; background-color: aqua; color: black; border-radius: 15%;" > Subscribe
+          </button>
+            </div>
+
+      </div>
+  </div>
+
+</section>
+
+</footer>
+
+
+{% endblock %}
