@@ -42,4 +42,9 @@ class TestPost(unittest.TestCase):
         post= Post.query.all()
         self.assertTrue(len(post) > 0)
 
-  
+    def test_relationship_user(self):
+        """
+        Will test whether the post is correctly related to the user who posted it
+        """
+        user = self.new_post.user.name
+        self.assertTrue(user == "sharonne")
