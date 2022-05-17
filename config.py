@@ -1,13 +1,12 @@
-from cgi import test
 import os
 
-from flask_sqlalchemy import SQLAlchemy
+
 
 
 class Config:
 
     SECRET_KEY =os.environ.get('SECRET_KEY')
-    SQLAlCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:Atara@localhost/blogs'
+    SQLAlCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:Atara@localhost/blog'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
@@ -33,7 +32,7 @@ class ProdConfig(Config):
        
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:Atara@localhost/blog_test'
-    pass
+    
 
 
 
