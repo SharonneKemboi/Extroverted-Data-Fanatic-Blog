@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gabriela';
+    font-size: 2em;
+    font-size: 1.5em;
+    background-color: #050505;
+    background-image: url("https://cdn.pixabay.com/photo/2018/05/14/16/54/cyber-3400789_960_720.jpg");
+ 
+  
+}
+
+h1,h4,h2{
+    color: rgb(10, 10, 10);
+    font-family: 'Gabriela';
+}
+
+p{
+    font-size: 1.8rem;
+    color: #efedee;
+}
+
+.navbar {
+  background-color: rgb(10, 10, 10);
+  border: none;
+}
+.navbar a {
+  color: white;
+  font-family: 'Gabriela';
+  font-weight: 900;
+  font-size: 1.9rem;
+}
+
+ul li{
+  list-style-type: none;
+}
+.post {
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Gabriela';
+    border: 0.5px solid black;
+    border-radius: 10px;
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  #name {
+    font-weight: bold;
+    font-family: 'Gabriela';
+    font-size: 175%;
+  }
+
+  .category {
+    height: 3px;
+    align-content: center;
+    border-radius: 8px;
+    background-color: rgba(95, 173, 218, 0.4);
+    border: none;
+    color: rgb(12, 240, 228);
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 375px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-family: 'Gabriela';
+  }
+
+  .category span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .category span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .category:hover span {
+    padding-right: 25px;
+  }
+
+  .category:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+
+
+  .img {
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+
+  .style {
+    font-family: 'Gabriela';
+    text-align: center;
+    font-size: 200%;
+  }
+
+  #style {
+    font-size: 200%;
+  }
+
+  .category {
+    padding-bottom: 50px;
+  }
